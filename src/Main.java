@@ -49,7 +49,7 @@ public class Main {
                     ", deporte: "+eventos[i].deporte+
                     ", dia: "+eventos[i].dia+
                     ", mes: "+eventos[i].mes+
-                    ", ano: "+eventos[i].ano+
+                    ", año: "+eventos[i].ano+
                     ", horario: "+eventos[i].horario+
                     ", Estado: "+eventos[i].ocupado+
                     ", participantes: "+eventos[i].participantes
@@ -65,11 +65,14 @@ public class Main {
                 if (eventos[i].dia.equals(dia)) {
                     System.out.println(
                         "Nº: "+eventos[i].numEvento+
-                        ", nombre: " + eventos[i].nombre +
-                        ", deporte: " + eventos[i].deporte +
-                        ", dia: " + eventos[i].dia +
-                        ", horario: " + eventos[i].horario +
-                        ", participantes: " + eventos[i].participantes
+                        ", nombre: "+eventos[i].nombre+
+                        ", deporte: "+eventos[i].deporte+
+                        ", dia: "+eventos[i].dia+
+                        ", mes: "+eventos[i].mes+
+                        ", año: "+eventos[i].ano+
+                        ", horario: "+eventos[i].horario+
+                        ", Estado: "+eventos[i].ocupado+
+                        ", participantes: "+eventos[i].participantes
                     );
                 }
             }
@@ -82,11 +85,14 @@ public class Main {
                 if (eventos[i].deporte.equals(deporte)) {
                     System.out.println(
                         "Nº: "+eventos[i].numEvento+
-                        ", nombre: " + eventos[i].nombre +
-                        ", deporte: " + eventos[i].deporte +
-                        ", dia: " + eventos[i].dia +
-                        ", horario: " + eventos[i].horario +
-                        ", participantes: " + eventos[i].participantes
+                        ", nombre: "+eventos[i].nombre+
+                        ", deporte: "+eventos[i].deporte+
+                        ", dia: "+eventos[i].dia+
+                        ", mes: "+eventos[i].mes+
+                        ", año: "+eventos[i].ano+
+                        ", horario: "+eventos[i].horario+
+                        ", Estado: "+eventos[i].ocupado+
+                        ", participantes: "+eventos[i].participantes
                     );
                 }
             }
