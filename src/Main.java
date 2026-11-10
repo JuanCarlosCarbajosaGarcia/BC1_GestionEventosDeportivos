@@ -58,11 +58,11 @@ public class Main {
         }
     }
 
-    public static void buscarDia(Evento[] eventos, String dia){
+    public static void buscarDia(Evento[] eventos, String fecha){
         for(int i=1;i<eventos.length;i++){
             //comprueba que no sea nulo
             if(eventos[i]!=null) {
-                if (eventos[i].dia.equals(dia)) {
+                if (eventos[i].dia.equals(fecha)) {
                     System.out.println(
                         "Nº: "+eventos[i].numEvento+
                         ", nombre: "+eventos[i].nombre+
@@ -149,8 +149,8 @@ public class Main {
                 break;
                 case 3://buscar eventos por dia
                     System.out.println("introduzca el dia");
-                    String dia = sc.nextLine();
-                    buscarDia(eventos,dia);
+                    String fecha = sc.nextLine();
+                    buscarDia(eventos,fecha);
                 break;
                 case 4:
                     System.out.println("Deporte a buscar");
