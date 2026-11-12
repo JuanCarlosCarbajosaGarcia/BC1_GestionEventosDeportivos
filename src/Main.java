@@ -155,6 +155,7 @@ public class Main {
                 break;
                 case 4:
                     System.out.println("Deporte a buscar");
+                    sc.nextLine();
                     String deporte = sc.nextLine();
                     buscarDeporte(eventos,deporte);
                 break;
@@ -163,6 +164,7 @@ public class Main {
                 break;
                 case 6://eliminar evento
                     System.out.print("numero del evento a eliminar: ");
+                    sc.nextInt();
                     int num=sc.nextInt();
                     eliminar(eventos,num);
                 break;
