@@ -149,6 +149,7 @@ public class Main {
                 break;
                 case 3://buscar eventos por dia
                     System.out.println("introduzca el dia");
+                    sc.nextLine();
                     String fecha = sc.nextLine();
                     buscarDia(eventos,fecha);
                 break;
