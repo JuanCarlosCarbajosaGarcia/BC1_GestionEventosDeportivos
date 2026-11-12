@@ -14,31 +14,34 @@ public class Main {
         for (int i=1;i<eventos.length;i++) {
             //se asegura de que el objeto sea nulo
             if (eventos[i]==null){
-                num=i;
+                num=i;//asigna el primer valor nulo que se encuentre a num
                 break;//sale del for
             }
         }
 
+        //asignamos los valores
         eventos[num]=new Evento();
-        eventos[num].numEvento=num;
+        eventos[num].numEvento=num;//numero del evento
         System.out.print("nombre evento: ");
-        eventos[num].nombre=sc.nextLine();
+        eventos[num].nombre=sc.nextLine();//nombre del evento
         System.out.print("deporte: ");
-        eventos[num].deporte=sc.nextLine();
+        eventos[num].deporte=sc.nextLine();//deporte del evento
         System.out.print("dia: ");
-        eventos[num].dia=sc.nextLine();
+        eventos[num].dia=sc.nextLine();//dia del evento
         System.out.print("mes: ");
-        eventos[num].mes=sc.nextLine();
+        eventos[num].mes=sc.nextLine();//mes del evento
         System.out.print("año: ");
-        eventos[num].ano=sc.nextLine();
+        eventos[num].ano=sc.nextLine();//año del evento
         System.out.print("Horario: ");
-        eventos[num].horario=sc.nextLine();
+        eventos[num].horario=sc.nextLine();//horario del evento
         System.out.print("Estado: ");
-        eventos[num].ocupado=sc.nextLine();
+        eventos[num].ocupado=sc.nextLine();//estado del evento
         System.out.print("participantes: ");
-        eventos[num].participantes=sc.nextInt();
+        eventos[num].participantes=sc.nextInt();//cantidad de participantes del evento
+        //todos los 'del evento' an sido puestos por gusto del evento
     }
 
+    //muestra toda la informacion de todos los eventos
     public static void mostrar(Evento[] eventos){
         for(int i=1;i<eventos.length;i++){
             //comprueba que no sea nulo
@@ -58,6 +61,7 @@ public class Main {
         }
     }
 
+    //muestra todos los eventos que ocurran en un dia concreto sin tener encuenta mes o año
     public static void buscarDia(Evento[] eventos, String fecha){
         for(int i=1;i<eventos.length;i++){
             //comprueba que no sea nulo
@@ -79,6 +83,7 @@ public class Main {
         }
     }
 
+    //muestra todos los eventos que pertenezcan a un deporte especificado
     public static void buscarDeporte(Evento[] eventos, String deporte){
         for(int i=1;i<eventos.length;i++){
             if(eventos[i]!=null) {
@@ -99,6 +104,7 @@ public class Main {
         }
     }
 
+    //muestra la cantidad de eentos y los participantes totales
     public static void consultar(Evento[] eventos){
         int eventosTotal=0;
         int particTotal=0;
@@ -113,6 +119,7 @@ public class Main {
         System.out.println("Eventos totales: "+eventosTotal+", Participantes: "+particTotal);
     }
 
+    //elimina un evento combirtiendo el objeto elegido a nulo
     public static void eliminar(Evento[] eventos, int num){
         for (int i=1;i<eventos.length;i++){
             //comprueba que no sea nulo
@@ -125,6 +132,7 @@ public class Main {
         }
     }
 
+    //Main
     public static void main(String[] args) {
         boolean salir=false;
         Scanner sc=new Scanner(System.in);
@@ -153,7 +161,7 @@ public class Main {
                     String fecha = sc.nextLine();
                     buscarDia(eventos,fecha);
                 break;
-                case 4:
+                case 4://buscar eventos por deporte
                     System.out.println("Deporte a buscar");
                     sc.nextLine();
                     String deporte = sc.nextLine();
@@ -168,7 +176,7 @@ public class Main {
                     int num=sc.nextInt();
                     eliminar(eventos,num);
                 break;
-                case 7:
+                case 7://salir del bucle while
                     salir=true;
             }
         }
